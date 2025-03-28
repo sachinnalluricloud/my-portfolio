@@ -1,68 +1,193 @@
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(90deg, #003366, #005A9E);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00A1F1;
+}
+
+section {
+    padding: 40px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    max-width: 400px;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: linear-gradient(90deg, #0078D4, #005A9E);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #005A9E, #003366);
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #003366;
+    color: white;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+    }
+    .project {
+        width: 100%;
+    }
+}
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure Developer Portfolio</title>
+    <title>Job Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>John Doe</h1>
-        <p>Azure Cloud Developer</p>
+        <h1>Sachin Nalluri</h1>
+        <p>Software Engineer | Cloud Developer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <nav>
-        <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Experienced software engineer specializing in cloud computing, DevOps, and web development.</p>
+    </section>
     
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Cloud Migration</h3>
-            <p>Led the migration of on-premise applications to Azure.</p>
-        </div>
-        <div class="project">
-            <h3>DevOps Automation</h3>
-            <p>Implemented CI/CD pipelines using Azure DevOps.</p>
+        <div class="projects-container">
+            <div class="project">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=100&h=100&fit=crop" alt="Project 1">
+                <h3>Cloud Migration</h3>
+                <p>Migrated enterprise applications to Azure Cloud for scalability.</p>
+            </div>
+            <div class="project">
+                <img src="https://community-cdn-digitalocean-com.global.ssl.fastly.net/UD33x1XYKUSYG3C5JSz2MPAf?w=100&h=100&fit=crop" alt="Project 2">
+                <h3>DevOps Automation</h3>
+                <p>Implemented CI/CD pipelines to streamline deployment processes.</p>
+            </div>
+            <div class="project">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=100&h=100&fit=crop" alt="Project 3">
+                <h3>Cloud Security Enhancement</h3>
+                <p>Developed security solutions for cloud infrastructure.</p>
+            </div>
+            <div class="project">
+                <img src="https://wallpaperbat.com/img/873473-devops-background-image.jpg?w=100&h=100&fit=crop" alt="Project 4">
+                <h3>Data Lake Architecture</h3>
+                <p>Designed and deployed Azure Data Lake for big data processing.</p>
+            </div>
         </div>
     </section>
     
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>Azure Virtual Machines</li>
-            <li>Azure DevOps</li>
-            <li>CI/CD Pipelines</li>
-            <li>Terraform & Infrastructure as Code</li>
+            <li>Azure Cloud Services</li>
+            <li>DevOps & Automation</li>
+            <li>Web Development</li>
+            <li>Database Management</li>
         </ul>
     </section>
     
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: john.doe@example.com</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></p>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send</button>
-        </form>
+        <p>Email: sachinnalluri@example.com</p>
+        <p>LinkedIn: linkedin.com/in/sachinnalluri</p>
     </section>
     
     <footer>
-        <p>&copy; 2025 John Doe. All Rights Reserved.</p>
+        <p>&copy; 2025 Sachin Nalluri. All rights reserved.</p>
     </footer>
 </body>
 </html>
